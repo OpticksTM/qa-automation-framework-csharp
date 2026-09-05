@@ -1,38 +1,42 @@
-﻿global using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using projeto_qa_csharp.Pages;
 
-namespace projeto_qa_csharp;
-
-public class LoginTests
+namespace projeto_qa_csharp
 {
-    private IWebDriver driver = null!;
-
-    [SetUp]
-    public void Setup()
+    public class LoginTests
     {
-        // Inicializa o navegador Chrome
-        driver = new ChromeDriver();
-        
-        // Acessa a página oficial do SauceDemo
-        driver.Navigate().GoToUrl("https://www.saucedemo.com/");
-    }
+        private IWebDriver _driver = null!;
+        private LoginPage _loginPage = null!;
 
-    [Test]
-    public void DeveRealizarLoginComSucessoComUsuarioPadrao()
-    {
-        // Valida se o título da página contém a palavra "Swag Labs"
-        Assert.That(driver.Title, Does.Contain("Swag Labs"));
-    }
-
-    [TearDown]
-    public void TearDown()
-    {
-        // Fecha o navegador e descarta o objeto da memória corretamente
-        if (driver != null)
+        [SetUp]
+        public void Setup()
         {
-            driver.Quit();
-            driver.Dispose();
+            _driver = new ChromeDriver();
+            _driver.Manage().Window.Maximize();
+            _driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+            
+            // Instancia a página de login passando o driver ativo
+            _loginPage = new LoginPage(_driver);
+        }
+
+        [Test]
+        public void DeveRealizarLoginComSucesso()
+        {
+            // Act: Executa as ações usando os métodos do Page Object
+            _loginPage.FazerLogin("standard_user", "secret_sauce");
+
+            // Assert: Valida se a URL mudou para o inventory (indicando sucesso no login)
+            Assert.That(_driver.Url, Does.Contain("inventory.html"), "O login não foi realizado com sucesso.");
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            // Fecha o navegador após o teste para não deixar processos abertos
+            _driver.Quit();
+            _driver.Dispose();
         }
     }
 }

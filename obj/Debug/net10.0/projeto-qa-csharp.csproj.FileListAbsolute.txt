@@ -159,3 +159,4 @@ C:\Users\ALLYSON\projeto-qa-csharp\obj\Debug\net10.0\refint\projeto-qa-csharp.dl
 C:\Users\ALLYSON\projeto-qa-csharp\obj\Debug\net10.0\projeto-qa-csharp.pdb
 C:\Users\ALLYSON\projeto-qa-csharp\obj\Debug\net10.0\projeto-qa-csharp.genruntimeconfig.cache
 C:\Users\ALLYSON\projeto-qa-csharp\obj\Debug\net10.0\ref\projeto-qa-csharp.dll
+C:\Users\ALLYSON\projeto-qa-csharp\obj\Debug\net10.0\projeto-qa-csharp.sourcelink.json
