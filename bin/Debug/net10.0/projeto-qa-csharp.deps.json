@@ -11,10 +11,27 @@
           "Microsoft.NET.Test.Sdk": "17.14.0",
           "NUnit": "4.3.2",
           "NUnit3TestAdapter": "5.0.0",
-          "Selenium.WebDriver": "4.48.0"
+          "Selenium.WebDriver": "4.48.0",
+          "SpecFlow.NUnit": "3.9.74"
         },
         "runtime": {
           "projeto-qa-csharp.dll": {}
+        }
+      },
+      "BoDi/1.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/BoDi.dll": {
+            "assemblyVersion": "1.5.0.0",
+            "fileVersion": "1.5.0.0"
+          }
+        }
+      },
+      "Gherkin/19.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Gherkin.dll": {
+            "assemblyVersion": "19.0.3.0",
+            "fileVersion": "19.0.3.0"
+          }
         }
       },
       "Microsoft.ApplicationInsights/2.22.0": {
@@ -30,6 +47,26 @@
           "lib/net8.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
             "assemblyVersion": "15.0.0.0",
             "fileVersion": "17.1400.225.12603"
+          }
+        }
+      },
+      "Microsoft.DotNet.PlatformAbstractions/1.0.3": {
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/1.0.3": {
+        "dependencies": {
+          "Microsoft.DotNet.PlatformAbstractions": "1.0.3",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
           }
         }
       },
@@ -553,6 +590,77 @@
             "fileVersion": "0.0.0.0"
           }
         }
+      },
+      "SpecFlow/3.9.74": {
+        "dependencies": {
+          "BoDi": "1.5.0",
+          "Gherkin": "19.0.3",
+          "Microsoft.Extensions.DependencyModel": "1.0.3",
+          "SpecFlow.Internal.Json": "1.0.8",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/TechTalk.SpecFlow.dll": {
+            "assemblyVersion": "3.9.0.0",
+            "fileVersion": "3.9.74.14555"
+          }
+        }
+      },
+      "SpecFlow.Internal.Json/1.0.8": {
+        "runtime": {
+          "lib/netstandard2.0/SpecFlow.Internal.Json.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.8.28882"
+          }
+        }
+      },
+      "SpecFlow.NUnit/3.9.74": {
+        "dependencies": {
+          "NUnit": "4.3.2",
+          "SpecFlow": "3.9.74"
+        },
+        "runtime": {
+          "lib/net6.0/TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll": {
+            "assemblyVersion": "3.9.0.0",
+            "fileVersion": "3.9.74.14555"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
       }
     }
   },
@@ -561,6 +669,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BoDi/1.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CzIPzdIAFSd2zuLxI+0K9s48Qv3HQDbWiApn9h96j284rHs2bSPrn/PMca3mi4q3xLSEqOp+GUJ6+mXDD9prKg==",
+      "path": "bodi/1.5.0",
+      "hashPath": "bodi.1.5.0.nupkg.sha512"
+    },
+    "Gherkin/19.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kq9feqMojMj9aABrHb/ABEPaH2Y4dSclseSahAru6qxCeqVQNLLTgw/6vZMauzI1yBUL2fz03ub5yEd5btLfvg==",
+      "path": "gherkin/19.0.3",
+      "hashPath": "gherkin.19.0.3.nupkg.sha512"
     },
     "Microsoft.ApplicationInsights/2.22.0": {
       "type": "package",
@@ -575,6 +697,20 @@
       "sha512": "sha512-z2GYXGG6LjGoumT59xSB2dMnqSwQBjkxdDJmSJHwy5nPtZ435GXa6wj5hz/lRrAZ7NyXXxZNXVsiHXzHRru5eA==",
       "path": "microsoft.codecoverage/17.14.0",
       "hashPath": "microsoft.codecoverage.17.14.0.nupkg.sha512"
+    },
+    "Microsoft.DotNet.PlatformAbstractions/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rF92Gp5L2asYrFNf0cKNBxzzGLh1krHuj6TRDk9wdjN2qdvJLaNYOn1s9oYkMlptYX436KiEFqxhLB+I5veXvQ==",
+      "path": "microsoft.dotnet.platformabstractions/1.0.3",
+      "hashPath": "microsoft.dotnet.platformabstractions.1.0.3.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyModel/1.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z3o19EnheuegmvgpCzwoSlnCWxYA6qIUhvKJ7ifKHHvU7U+oYR/gliLiL3LVYOOeGMEEzkpJ5W67sOcXizGtlw==",
+      "path": "microsoft.extensions.dependencymodel/1.0.3",
+      "hashPath": "microsoft.extensions.dependencymodel.1.0.3.nupkg.sha512"
     },
     "Microsoft.NET.Test.Sdk/17.14.0": {
       "type": "package",
@@ -659,6 +795,48 @@
       "sha512": "sha512-kfKFPGlOtb2Jd6PlNqh0x7sid/LCrNIXKDhscVVaDVMnrjD3X2HdPI7TMbaIKSilhctKXU1fowhJpuzsMGX1LQ==",
       "path": "selenium.webdriver/4.48.0",
       "hashPath": "selenium.webdriver.4.48.0.nupkg.sha512"
+    },
+    "SpecFlow/3.9.74": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n6kcg9ZeQWxqJFoT23SsFT89U1QQNwvcN9pAX5alB6ZPr6K0p5D5nGIJ1PZsSaFaRFutiwQ+DicmxBCPAZVYIA==",
+      "path": "specflow/3.9.74",
+      "hashPath": "specflow.3.9.74.nupkg.sha512"
+    },
+    "SpecFlow.Internal.Json/1.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lVCC/Rie7N5rFoc7YxPS0nneLfsWSTIMMlkndwxhaD8MxBp3Bsv1HeiVjVwXCjWaQeoqZcvIy52fF5Xit00ZLw==",
+      "path": "specflow.internal.json/1.0.8",
+      "hashPath": "specflow.internal.json.1.0.8.nupkg.sha512"
+    },
+    "SpecFlow.NUnit/3.9.74": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nMPLztTT5IZDMnvNCUxklqaM+agn4kjuNy/qAcYQQOxau2G1MF73UxhL9OXjJQaEuPuyT8gJvXudOYCFZWztxA==",
+      "path": "specflow.nunit/3.9.74",
+      "hashPath": "specflow.nunit.3.9.74.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
+      "path": "system.configuration.configurationmanager/4.5.0",
+      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Permissions/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+      "path": "system.security.permissions/4.5.0",
+      "hashPath": "system.security.permissions.4.5.0.nupkg.sha512"
     }
   }
 }

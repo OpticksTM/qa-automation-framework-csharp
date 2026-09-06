@@ -1,42 +1,23 @@
 using NUnit.Framework;
 using System.Net.Http;
+using System.Threading.Tasks;
+using System;
 
-namespace projeto_qa_csharp.APITests
+[TestFixture]
+public class UserApiTests
 {
-    public class UserApiTests
+    [Test]
+    public async Task DeveRetornarNotFoundAoBuscarPostInexistente()
     {
-        private HttpClient _httpClient;
+        // Arrange (Configuração do cliente HTTP e do cenário com um ID inválido)
+        var client = new HttpClient();
+        client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
+        int idInexistente = 9999;
 
-        [SetUp]
-        public void Setup()
-        {
-            // Inicializa o cliente HTTP nativo apontando para a API de testes
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
-        }
+        // Act (Execução da requisição GET para um recurso que não existe)
+        HttpResponseMessage response = await client.GetAsync($"posts/{idInexistente}");
 
-        [Test]
-        public void TesteAPI_ValidarRetornoUsuarioComSucesso()
-        {
-            // Act: Faz uma requisição GET para buscar o usuário de ID 1 na API
-            HttpResponseMessage response = _httpClient.GetAsync("users/1").Result;
-
-            // Assert 1: Valida se a requisição foi bem-sucedida e se o status code é 200 (OK)
-            Assert.That(response.IsSuccessStatusCode, Is.True, "A requisição da API falhou.");
-            Assert.That((int)response.StatusCode, Is.EqualTo(200), "O Status Code deveria ser 200.");
-
-            // Act: Lê o corpo da resposta em formato JSON como string
-            string jsonResponse = response.Content.ReadAsStringAsync().Result;
-
-            // Assert 2: Valida se o payload JSON contém o dado esperado
-            Assert.That(jsonResponse, Does.Contain("Leanne Graham"), "O corpo da resposta não contém o usuário esperado.");
-        }
-
-        [TearDown]
-        public void TearDown()
-        {
-            // Libera os recursos de memória do HttpClient
-            _httpClient.Dispose();
-        }
+        // Assert (Validação se o status code retornado é 404 - Not Found)
+        Assert.That((int)response.StatusCode, Is.EqualTo(404), "A API deveria retornar 404 para um post inexistente.");
     }
 }
