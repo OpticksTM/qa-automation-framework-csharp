@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("projeto-qa-csharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+143a532f8bf836c03779cce2a002226571ef808d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f0e1491a776498dded2762e01f440f14c03ac74")]
 [assembly: System.Reflection.AssemblyProductAttribute("projeto-qa-csharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("projeto-qa-csharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

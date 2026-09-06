@@ -40,9 +40,8 @@ namespace projeto_qa_csharp.Tests
             inventoryPage.AdicionarMochilaAoCarrinho();                         // Adiciona produto ao carrinho [Ação]
             inventoryPage.IrParaCarrinho();                                     // Navega para o carrinho       [Ação]
             
-            // Fluxo detalhado do checkout usando os métodos reais da classe
-            cartPage.IrParaCheckout();                                          // Clica no botão de checkout    [Ação]
-            cartPage.PreencherDadosCheckout("João", "Silva", "29100-000");        // Preenche dados e continua    [Ação]
+            cartPage.IrParaCheckout();                                          // Clica no botão de checkout   [Ação]
+            cartPage.PreencherDadosCheckout("João", "Silva", "29100-000");        // Preenche dados válidos       [Ação]
             cartPage.FinalizarCompra();                                         // Clica em finalizar           [Ação]
 
             // Valida se a mensagem de sucesso apareceu na tela
@@ -63,11 +62,34 @@ namespace projeto_qa_csharp.Tests
             Assert.That(mensagemAtual, Does.Contain(mensagemEsperada), "A mensagem de erro difere."); // Valida erro [Assert]
         }
 
+        // 3. Cenário Negativo de Checkout (Campos Obrigatórios Vazios)
+        [Test]
+        public void TesteNegativo_CheckoutCamposVazios()
+        {
+            var loginPage = new LoginPage(_driver);
+            var inventoryPage = new InventoryPage(_driver);
+            var cartPage = new CartAndCheckoutPage(_driver);
+
+            loginPage.FazerLogin("standard_user", "secret_sauce");
+            inventoryPage.AdicionarMochilaAoCarrinho();
+            inventoryPage.IrParaCarrinho();
+            
+            cartPage.IrParaCheckout();
+            
+            // Tentamos avançar preenchendo o nome e sobrenome, mas deixando o CEP vazio ("")
+            cartPage.PreencherDadosCheckout("João", "Silva", "");
+
+            string mensagemEsperada = "Error: Postal Code is required";
+            string mensagemAtual = cartPage.ObterMensagemErroCheckout();
+
+            Assert.That(mensagemAtual, Does.Contain(mensagemEsperada), "A mensagem de erro do checkout difere.");
+        }
+
         [TearDown]
         public void TearDown()
         {
             _driver.Quit();                                                     // Fecha o navegador            [TearDown]
-            _driver.Dispose();                                                  // Libera os recursos de memória[TearDown - Fix NUnit1032]
+            _driver.Dispose();                                                  // Libera os recursos de memória[TearDown]
         }
     }
 }
