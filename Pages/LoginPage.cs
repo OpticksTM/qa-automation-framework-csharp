@@ -6,38 +6,27 @@ namespace projeto_qa_csharp.Pages
     {
         private readonly IWebDriver _driver;
 
-        // Mapeamento dos elementos da tela (Locators)
-        private IWebElement UsernameField => _driver.FindElement(By.Id("user-name"));
-        private IWebElement PasswordField => _driver.FindElement(By.Id("password"));
-        private IWebElement LoginButton => _driver.FindElement(By.Id("login-button"));
+        private IWebElement UsernameField => _driver.FindElement(By.Id("user-name")); // Mapeia o campo de usuário     [Elemento UI]
+        private IWebElement PasswordField => _driver.FindElement(By.Id("password")); // Mapeia o campo de senha       [Elemento UI]
+        private IWebElement LoginButton => _driver.FindElement(By.Id("login-button"));  // Mapeia o botão de login       [Elemento UI]
+        private IWebElement ErrorMessage => _driver.FindElement(By.XPath("//h3[@data-test='error']")); // Mapeia o erro [Elemento UI]
 
         public LoginPage(IWebDriver driver)
         {
             _driver = driver;
         }
 
-        // Ações encapsuladas da página
-        public void PreencherUsuario(string usuario)
+        // Renomeado para FazerLogin para padronizar com a chamada do teste   [Ação]
+        public void FazerLogin(string usuario, string senha)
         {
             UsernameField.SendKeys(usuario);
-        }
-
-        public void PreencherSenha(string senha)
-        {
             PasswordField.SendKeys(senha);
-        }
-
-        public void ClicarNoBotaoLogin()
-        {
             LoginButton.Click();
         }
 
-        // Método agregador para facilitar o fluxo de login
-        public void FazerLogin(string usuario, string senha)
+        public string ObterMensagemErro()                                        // Retorna o texto do erro       [Leitura]
         {
-            PreencherUsuario(usuario);
-            PreencherSenha(senha);
-            ClicarNoBotaoLogin();
+            return ErrorMessage.Text;
         }
     }
 }
