@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "UMMJZJ4O0kA=",
   "success": true,
   "projectFilePath": "C:\\Users\\ALLYSON\\OneDrive\\Desktop\\qa-automation-framework-csharp-main\\qa-automation-framework-csharp-main\\projeto-qa-csharp.csproj",
+=======
+  "dgSpecHash": "DHpQ/fVWUNE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ALLYSON\\projeto-qa-csharp\\projeto-qa-csharp.csproj",
+>>>>>>> 521ffa5946228db8a9ce2ff36a16cad443632d35
   "expectedPackageFiles": [
     "C:\\Users\\ALLYSON\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\ALLYSON\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",

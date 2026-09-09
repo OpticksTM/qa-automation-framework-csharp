@@ -2234,11 +2234,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\ALLYSON\\OneDrive\\Desktop\\qa-automation-framework-csharp-main\\qa-automation-framework-csharp-main\\projeto-qa-csharp.csproj",
       "projectName": "projeto-qa-csharp",
       "projectPath": "C:\\Users\\ALLYSON\\OneDrive\\Desktop\\qa-automation-framework-csharp-main\\qa-automation-framework-csharp-main\\projeto-qa-csharp.csproj",
       "packagesPath": "C:\\Users\\ALLYSON\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ALLYSON\\OneDrive\\Desktop\\qa-automation-framework-csharp-main\\qa-automation-framework-csharp-main\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\ALLYSON\\projeto-qa-csharp\\projeto-qa-csharp.csproj",
+      "projectName": "projeto-qa-csharp",
+      "projectPath": "C:\\Users\\ALLYSON\\projeto-qa-csharp\\projeto-qa-csharp.csproj",
+      "packagesPath": "C:\\Users\\ALLYSON\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ALLYSON\\projeto-qa-csharp\\obj\\",
+>>>>>>> 521ffa5946228db8a9ce2ff36a16cad443632d35
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ALLYSON\\AppData\\Roaming\\NuGet\\NuGet.Config"
