@@ -1,9 +1,13 @@
 # QA Automation Framework - C# (.NET)
 
-[![Build status](https://img.shields.io/github/workflow/status/OpticksTM/qa-automation-framework-csharp/CI%20Pipeline?style=flat-square)](https://github.com/OpticksTM/qa-automation-framework-csharp/actions)
-[![Commit activity](https://img.shields.io/github/commit-activity/w/OpticksTM/qa-automation-framework-csharp?style=flat-square)](https://github.com/OpticksTM/qa-automation-framework-csharp/commits/main)
-[![Last commit](https://img.shields.io/github/last-commit/OpticksTM/qa-automation-framework-csharp?style=flat-square)](https://github.com/OpticksTM/qa-automation-framework-csharp)
-[![License](https://img.shields.io/github/license/OpticksTM/qa-automation-framework-csharp?style=flat-square)](https://github.com/OpticksTM/qa-automation-framework-csharp/blob/main/LICENSE)
+<p align="left">
+  <img src="https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="C#">
+  <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET">
+  <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white" alt="Selenium">
+  <img src="https://img.shields.io/badge/SpecFlow-%238C1515.svg?style=for-the-badge&logo=cucumber&logoColor=white" alt="SpecFlow">
+  <img src="https://img.shields.io/badge/NUnit-000000?style=for-the-badge&logo=nunit&logoColor=white" alt="NUnit">
+  <img src="https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+</p>
 
 Framework de testes automatizados desenvolvido em C# com uma abordagem híbrida de qualidade (Full-Cycle QA), cobrindo testes de interface de usuário (UI) guiados por comportamento (BDD) e validação de serviços de API.
 
