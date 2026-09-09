@@ -6,7 +6,7 @@ using OpenQA.Selenium.Chrome;
 [Binding]
 public class LoginSteps
 {
-    private IWebDriver _driver;
+    private IWebDriver? _driver;
 
     // Hook do SpecFlow que roda antes de cada cenário para abrir o navegador
     [BeforeScenario]
