@@ -1,5 +1,10 @@
 # QA Automation Framework - C# (.NET)
 
+[![Build status](https://img.shields.io/github/workflow/status/OpticksTM/qa-automation-framework-csharp/CI%20Pipeline?style=flat-square)](https://github.com/OpticksTM/qa-automation-framework-csharp/actions)
+[![Commit activity](https://img.shields.io/github/commit-activity/w/OpticksTM/qa-automation-framework-csharp?style=flat-square)](https://github.com/OpticksTM/qa-automation-framework-csharp/commits/main)
+[![Last commit](https://img.shields.io/github/last-commit/OpticksTM/qa-automation-framework-csharp?style=flat-square)](https://github.com/OpticksTM/qa-automation-framework-csharp)
+[![License](https://img.shields.io/github/license/OpticksTM/qa-automation-framework-csharp?style=flat-square)](https://github.com/OpticksTM/qa-automation-framework-csharp/blob/main/LICENSE)
+
 Framework de testes automatizados desenvolvido em C# com uma abordagem híbrida de qualidade (Full-Cycle QA), cobrindo testes de interface de usuário (UI) guiados por comportamento (BDD) e validação de serviços de API.
 
 ## Tecnologias e Ferramentas Utilizadas
